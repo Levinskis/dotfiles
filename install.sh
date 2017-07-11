@@ -9,11 +9,26 @@ do
 		if [[ "$file" != *install* ]]; then
 
 			echo "Making link for $file"
-			$(ln -s $PWD/$file $HOME/$file)
+			ln -s $PWD/$file ~/$file 2>/dev/null
 
 		fi
 	fi
+
 done
+
+
+if [[ -e ~/.profile ]]; then # For Debian based distros
+
+    echo "alias tmux='tmux -2'" >>  ~/.bashrc
+    echo "[[ -r ~/.bashrc ]] && . ~/.bashrc" >>  ~/.profile
+fi 
+
+if [[ -e ~/.bash_profile ]]; then # For other distros 
+
+    echo "alias tmux='tmux -2'" >>  ~/.bashrc
+    echo "[[ -r ~/.bashrc ]] && . ~/.bashrc" >>  ~/.bash_profile
+
+ fi   
 
 
 

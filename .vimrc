@@ -6,16 +6,24 @@ call plug#begin('~/.vim/plugged')
 
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+Plug 'tomasr/molokai'
+
 " Initialize plugin system
 call plug#end()
 
 
 "My stuff
 
+set t_Co=256
+colorscheme molokai
+
+" let g:molokai_original=1
+" let g:rehash256=1
 
 set relativenumber
 set expandtab
 set hlsearch
 set incsearch
-set tabstop=8
+set tabstop=4
 syntax on
