@@ -1,0 +1,3 @@
+- Check whenever .bashrc was updated with personal preferences. Use "special comment" , check for it using `cat ~/.bashrc | grep "comment"`. Only problem for pacthing with new updates, if there was one. In future make own .bashrc
+- Check for already  made links, now it is dirty solution 2>/dev/null
+- Install entire enviroment using install.sh script

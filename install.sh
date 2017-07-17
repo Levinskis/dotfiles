@@ -2,6 +2,8 @@
 
 echo 'Installing dotfiles...'
 
+apt-get install  git-core vim i3 feh tmux lxappearance gtk-chtheme qt4-qtconfig -y
+
 
 for file in $(ls -A $PWD) # `ls -A` can be used
 do

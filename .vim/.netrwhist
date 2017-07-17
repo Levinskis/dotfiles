@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/sdc'
+let g:netrw_dirhist_2='/home/sdc/dotfiles'
+let g:netrw_dirhist_3='/home/sdc'
+let g:netrw_dirhist_4='/home/sdc/catkin_ws'
+let g:netrw_dirhist_5='/home/sdc/catkin_ws/src'
+let g:netrw_dirhist_6='/home/sdc/catkin_ws/src/lidar_data_pub'
