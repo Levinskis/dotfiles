@@ -26,7 +26,14 @@ set expandtab
 set hlsearch
 set incsearch
 set tabstop=4
+set shiftwidth=4
 
 syntax on
 filetype on
 filetype plugin on
+
+set undodir=~/.vimbckp/.undo//
+
+set backupdir=~/.vimbckp/.backup//
+
+set directory=~/.vimbckp/.swp//
