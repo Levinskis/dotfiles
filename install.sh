@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 echo 'Installing dotfiles...'
-
-apt-get install  git-core vim i3 feh tmux mdp -y # lxappearance gtk-chtheme qt4-qtconfig -y
+sudo apt-get update 
+sudo apt-get install  git-core vim i3 feh tmux mdp -y # lxappearance gtk-chtheme qt4-qtconfig -y
 
 
 for file in $(ls -A $PWD) # `ls -A` can be used
@@ -36,8 +36,8 @@ fi
 
 if [[ -e ~/.bash_profile ]]; then # For other distros 
 
-    if ! grep -q META_COMMENT_1 ~/.bash_progile; then
-     echo "#META_COMMENT_1" >> ~/.profile
+    if ! grep -q META_COMMENT_1 ~/.bash_profile; then
+        echo "#META_COMMENT_1" >> ~/.profile
         echo "alias tmux='tmux -2'" >>  ~/.bashrc
         echo "export TERM=xterm-256color" >>  ~/.bashrc
         echo "[[ -r ~/.bashrc ]] && . ~/.bashrc" >>  ~/.bash_profile
@@ -50,6 +50,8 @@ if [[ ! -d ~/.vimbckp/ ]]; then
     mkdir ~/.vimbckp/
     mkdir ~/.vimbckp/.backup ~/.vimbckp/.swp ~/.vimbckp/.undo 
 fi
+
+ex -S ./plugins.vim -c 'PlugInstall | sleep 1 | exit'
 
 cd $HOME
 mkdir tmp
