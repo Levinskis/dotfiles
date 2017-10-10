@@ -51,7 +51,8 @@ if [[ ! -d ~/.vimbckp/ ]]; then
     mkdir ~/.vimbckp/.backup ~/.vimbckp/.swp ~/.vimbckp/.undo 
 fi
 
-ex -S ./plugins.vim -c 'PlugInstall | sleep 1 | exit'
+
+ex -u .vim/autoload/plug.vim -c 'source plugins.vim | PlugInstall | quitall'
 
 cd $HOME
 mkdir tmp
