@@ -25,3 +25,8 @@ set undodir=~/.vimbckp/.undo//
 set backupdir=~/.vimbckp/.backup//
 
 set directory=~/.vimbckp/.swp//
+
+"My remapping
+inoremap jk <esc>
+
+let mapleader  = ","
